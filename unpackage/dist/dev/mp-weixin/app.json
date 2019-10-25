@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cate/index",
+    "pages/mine/index",
+    "pages/index/customer_service"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#2d7ef7",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#2d7ef7",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/1.png",
+        "selectedIconPath": "static/images/1-1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cate/index",
+        "iconPath": "static/images/2.png",
+        "selectedIconPath": "static/images/2-1.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/index/customer_service",
+        "iconPath": "static/images/3.png",
+        "selectedIconPath": "static/images/3-1.png",
+        "text": "客服"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/images/4.png",
+        "selectedIconPath": "static/images/4-1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
