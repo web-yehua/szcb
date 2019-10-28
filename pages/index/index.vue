@@ -31,7 +31,7 @@
 			
 		</view>
 		
-		<goodsGridBlock
+		<goodsThirdBlock
 			show-left-img="new"
 			tip-text="新品推荐"
 			sub-text="体验前沿科技"
@@ -50,12 +50,14 @@
 	
 	import pageSwiper from '../../components/page-swiper.vue'
 	import goodsGridBlock from '../../components/goods-grid-block.vue'
+	import goodsThirdBlock from '../../components/goods-third-block.vue'
 	export default {
 		components:{
 			uniIcons,
 			uniNavBar,
 			pageSwiper,
 			goodsGridBlock,
+			goodsThirdBlock,
 		},
 		data() {
 			return {

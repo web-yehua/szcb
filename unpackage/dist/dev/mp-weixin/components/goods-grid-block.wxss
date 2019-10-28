@@ -1,5 +1,5 @@
 
-.tip-gooos-block.data-v-cf8b87fc{
+.tip-gooos-block.data-v-e9fe786e{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -13,7 +13,7 @@
 	font-size: 16px;
 	border-bottom: 14px solid #f6f6f6;
 }
-.tip-gooos-block .tip-block.data-v-cf8b87fc{
+.tip-gooos-block .tip-block.data-v-e9fe786e{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -33,12 +33,12 @@
 	        align-items: center;
 	padding: 15px 0px;
 }
-.tip-gooos-block .tip-block .image.data-v-cf8b87fc{
+.tip-gooos-block .tip-block .image.data-v-e9fe786e{
 	width: 30px;
 	height: 18px;
 	margin-right: 10px;
 }
-.tip-gooos-block .tip-block .tip-content-block.data-v-cf8b87fc{
+.tip-gooos-block .tip-block .tip-content-block.data-v-e9fe786e{
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	    -ms-flex: 1;
@@ -58,7 +58,7 @@
 	        justify-content: flex-start;
 	font-weight: bold;
 }
-.tip-gooos-block .tip-block .tip-content-block .tip-text.data-v-cf8b87fc{
+.tip-gooos-block .tip-block .tip-content-block .tip-text.data-v-e9fe786e{
 	font-size: 20px;
 	color: #f18425;
 	margin-right: 10px;
@@ -66,14 +66,14 @@
 	    -ms-flex-item-align: end;
 	        align-self: flex-end;
 }
-.tip-gooos-block .tip-block .tip-content-block .sub-text.data-v-cf8b87fc{
+.tip-gooos-block .tip-block .tip-content-block .sub-text.data-v-e9fe786e{
 	font-size: 16px;
 	color: #b6b6b6;
 	-webkit-align-self: flex-end;
 	    -ms-flex-item-align: end;
 	        align-self: flex-end;
 }
-.tip-gooos-block .goods-grid-block.data-v-cf8b87fc{
+.tip-gooos-block .goods-grid-block.data-v-e9fe786e{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 5px;

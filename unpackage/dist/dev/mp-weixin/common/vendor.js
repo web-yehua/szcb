@@ -7492,9 +7492,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!****************************************************!*\
-  !*** D:/web-pro/uni-app/fs-shop/sz-car/pages.json ***!
-  \****************************************************/
+/*!********************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/pages.json ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8399,20 +8399,20 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 
 /***/ }),
 /* 7 */
-/*!*********************************************************************!*\
-  !*** D:/web-pro/uni-app/fs-shop/sz-car/pages.json?{"type":"style"} ***!
-  \*********************************************************************/
+/*!*************************************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/pages.json?{"type":"style"} ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "深圳车保商城", "usingComponents": { "uni-icons": "/components/uni-icons/uni-icons", "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "page-swiper": "/components/page-swiper", "goods-grid-block": "/components/goods-grid-block" } }, "pages/cate/index": { "navigationBarTitleText": "分类", "usingComponents": {} }, "pages/mine/index": { "navigationBarTitleText": "个人中心", "usingComponents": {} }, "pages/index/customer_service": { "navigationBarTitleText": "客服", "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#2d7ef7", "backgroundColor": "#F8F8F8", "navigationStyle": "default" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "深圳车保商城" }, "pages/cate/index": { "navigationBarTitleText": "分类" }, "pages/mine/index": { "navigationBarTitleText": "个人中心" }, "pages/index/customer_service": { "navigationBarTitleText": "客服" } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#2d7ef7", "backgroundColor": "#F8F8F8", "navigationStyle": "default" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
-/*!********************************************************************!*\
-  !*** D:/web-pro/uni-app/fs-shop/sz-car/pages.json?{"type":"stat"} ***!
-  \********************************************************************/
+/*!************************************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/pages.json?{"type":"stat"} ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8424,9 +8424,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 10 */,
 /* 11 */,
 /* 12 */
-/*!*******************************************************!*\
-  !*** D:/web-pro/uni-app/fs-shop/sz-car/utils/util.js ***!
-  \*******************************************************/
+/*!***********************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/utils/util.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8597,9 +8597,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 16 */
-/*!********************************************************!*\
-  !*** D:/web-pro/uni-app/fs-shop/sz-car/utils/store.js ***!
-  \********************************************************/
+/*!************************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/utils/store.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

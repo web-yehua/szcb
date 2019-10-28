@@ -4,6 +4,7 @@
     "uni-icons": "/components/uni-icons/uni-icons",
     "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
     "page-swiper": "/components/page-swiper",
-    "goods-grid-block": "/components/goods-grid-block"
+    "goods-grid-block": "/components/goods-grid-block",
+    "goods-third-block": "/components/goods-third-block"
   }
 }

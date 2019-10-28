@@ -22,7 +22,7 @@
 <style>
 	.item-block{
 		width: 100%;
-		height: 320px;
+		height: 250px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -30,7 +30,7 @@
 	}
 	.item-block .image{
 		width: 100%;
-		height: 220px;
+		height: 170px;
 	}
 	.item-block .name{
 		margin: 10px 0;
