@@ -1,0 +1,11 @@
+
+.verify-block .btn{
+	background: #2D7EF7;
+	color: #FFFFFF;
+	font-size: 13px;
+}
+.verify-block .btn:after{
+	color: #FFFFFF;
+	border:unset;
+}
+

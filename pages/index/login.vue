@@ -3,11 +3,11 @@
 		<image class="icon-image" src="/static/images/car-login.jpg" mode="aspectFit"></image>
 		<view class="item-block">
 			<image class="image" src="../../static/images/phone.jpg" mode="aspectFit"></image>
-			<input class="input"  type="number" v-model="phone" :value="phone" placeholder="请输入手机号码" placeholder-style="color:#FFFFFF" maxlength="11"/>
+			<input class="input"  type="number" v-model="phone" value="{phone}" placeholder="请输入手机号码" placeholder-style="color:#FFFFFF" maxlength="11"/>
 		</view>
 		<view class="item-block">
 			<image class="image" src="../../static/images/secure.jpg" mode="aspectFit"></image>
-			<input class="input" type="number" v-model="verify" :value="verify" placeholder="请输入验证码" placeholder-style="color:#FFFFFF" maxlength="6"/>
+			<input class="input" type="number" v-model="verify" value="{verify}" placeholder="请输入验证码" placeholder-style="color:#FFFFFF" maxlength="6"/>
 			
 			<send-verify
 				class="login-verify"
@@ -15,7 +15,7 @@
 			/>
 		</view>
 		
-		<view class="btn" @click="handleLogin"> 登 录 </view>
+		<view class="btn-login" @click="handleLogin"> 登 录 </view>
 		<navigator class="back" url="index" open-type="switchTab">返回首页</navigator>
 	</view>
 </template>
@@ -80,7 +80,7 @@
 		flex: 1;
 	}
 	
-	.btn{
+	.btn-login{
 		width: 100%;
 		margin-top: 30px;
 		margin-bottom: 15px;

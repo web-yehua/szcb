@@ -734,7 +734,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -6981,7 +6981,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7002,14 +7002,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7085,7 +7085,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8406,7 +8406,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "深圳车保商城" }, "pages/cate/index": { "navigationBarTitleText": "分类" }, "pages/mine/index": { "navigationBarTitleText": "个人中心" }, "pages/index/customer_service": { "navigationBarTitleText": "客服" }, "pages/mine/setting_info": { "navigationBarTitleText": "个人信息" }, "pages/mine/money_log": { "navigationBarTitleText": "余额" }, "pages/mine/withdrawal": { "navigationBarTitleText": "提现" }, "pages/mine/withdrawal_log": { "navigationBarTitleText": "提现日志" }, "pages/mine/open_vip": { "navigationBarTitleText": "会员" }, "pages/index/web_view": { "navigationBarTitleText": "关于我们" }, "pages/mine/car": { "navigationBarTitleText": "我的爱车" }, "pages/mine/qr_code": { "navigationBarTitleText": "我的二维码" }, "pages/mine/team": { "navigationBarTitleText": "我的团队" } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#2d7ef7", "backgroundColor": "#F8F8F8", "navigationStyle": "default" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "深圳车保商城" }, "pages/cate/index": { "navigationBarTitleText": "分类" }, "pages/mine/index": { "navigationBarTitleText": "个人中心" }, "pages/index/customer_service": { "navigationBarTitleText": "客服" }, "pages/mine/setting_info": { "navigationBarTitleText": "个人信息" }, "pages/mine/money_log": { "navigationBarTitleText": "余额" }, "pages/mine/withdrawal": { "navigationBarTitleText": "提现" }, "pages/mine/withdrawal_log": { "navigationBarTitleText": "提现日志" }, "pages/mine/open_vip": { "navigationBarTitleText": "会员" }, "pages/index/web_view": { "navigationBarTitleText": "关于我们" }, "pages/mine/car": { "navigationBarTitleText": "我的爱车" }, "pages/mine/qr_code": { "navigationBarTitleText": "我的二维码" }, "pages/mine/team": { "navigationBarTitleText": "我的团队" }, "pages/mine/car_add": { "navigationBarTitleText": "新增爱车" }, "pages/index/login": { "navigationBarTitleText": "用户登录" } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#2d7ef7", "backgroundColor": "#F8F8F8", "navigationStyle": "default" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -8598,71 +8598,29 @@ function normalizeComponent (
 /***/ }),
 /* 16 */
 /*!************************************************!*\
-  !*** D:/web-pro/uni-app/sz-car/utils/store.js ***!
+  !*** D:/web-pro/uni-app/sz-car/store/index.js ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
+var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 17));
+var _state = _interopRequireDefault(__webpack_require__(/*! ./state */ 18));
+var _mutations = _interopRequireDefault(__webpack_require__(/*! ./mutations */ 19));
+var _getters = _interopRequireDefault(__webpack_require__(/*! ./getters */ 20));
+var _actions = _interopRequireDefault(__webpack_require__(/*! ./actions */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 _vue.default.use(_vuex.default);
-var LOGIN_USER_INFO = 'login_user_info';
-
-var state_info = {
-  token: '',
-  user_id: 0,
-  face: '',
-  name: '' };
 
 var store = new _vuex.default.Store({
-  state: state_info,
-  mutations: {
-    initLogin: function initLogin(state) {
-      //获取登录信息
-      var user_login_info = uni.getStorageSync(LOGIN_USER_INFO);
-      console.log(state, user_login_info);
-      console.log(typeof user_login_info);
-      if (user_login_info) {
-        store.commit('login', user_login_info);
-      }
-    },
-    initLoginState: function initLoginState(state, user_login_info) {
-      var token = user_login_info.hasOwnProperty('token') ? user_login_info.token : '';
-      var user_id = 0;
-      //存在登录信息
-      var token_arr = token.split('.');
-      user_id = parseInt([0]);
-
-      state.token = token;
-      state.user_id = user_id;
-      state.name = user_login_info.hasOwnProperty('name') ? user_login_info.name : '';
-      state.face = user_login_info.hasOwnProperty('face') ? user_login_info.face : '';
-      if (state.user_id) {
-
-      } else {
-
-      }
-    },
-    login: function login(state, provider) {
-      console.log(state);
-      console.log(provider);
-      //记录登录信息
-      uni.setStorageSync(LOGIN_USER_INFO, provider);
-
-    },
-    logout: function logout(state) {
-      state = state_info;
-      //销毁登录信息
-      uni.clearStorageSync(LOGIN_USER_INFO, provider);
-
-    } } });var _default =
-
+  state: _state.default,
+  getters: _getters.default,
+  actions: _actions.default,
+  mutations: _mutations.default });var _default =
 
 
 store;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 17 */
@@ -9613,6 +9571,201 @@ var index_esm = {
 
 /* harmony default export */ __webpack_exports__["default"] = (index_esm);
 
+
+/***/ }),
+/* 18 */
+/*!************************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/store/state.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  user_id: 0,
+  user_type: 0,
+  user_money: 0.00,
+  user_car_num: 0,
+  user_token: "",
+  user_name: "",
+  user_face: "" };exports.default = _default;
+
+/***/ }),
+/* 19 */
+/*!****************************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/store/mutations.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  initUserData: function initUserData(state, param) {
+    state.user_id = param.user_id - 0 || 0;
+    state.user_type = param.user_type - 0 || 0;
+    state.user_car_num = param.user_car_num || 0;
+    state.user_money = param.user_money || 0.00;
+    state.user_token = param.user_token || '';
+    state.user_name = param.user_name || '';
+    state.user_face = param.user_face || '';
+  } };exports.default = _default;
+
+/***/ }),
+/* 20 */
+/*!**************************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/store/getters.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+/* 21 */
+/*!**************************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/store/actions.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _req = _interopRequireDefault(__webpack_require__(/*! ../utils/req.js */ 22));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+{
+  login_in: function login_in(_ref, _ref2) {var commit = _ref.commit;var phone = _ref2.phone,verify = _ref2.verify;
+    //用户登录
+    console.log(verify);
+    (0, _req.default)('user-login', {
+      data: {
+        code: verify,
+        phone: phone },
+
+      handleSuccess: function handleSuccess(data, res) {
+        getApp().globalData.showToastNoIcon(res.msg);
+        console.log(data);
+        var user_token = data.user_token;
+        var user_token_arr = user_token.split('.');
+        var user_id = user_token_arr[0] - 0;
+        var login_info = {
+          user_id: user_id,
+          user_token: user_token,
+          user_name: data.name,
+          user_face: data.face,
+          user_type: data.type,
+          user_money: data.money,
+          user_car_num: data.car_num };
+
+        //登录成功
+        commit('initUserData', login_info);
+        //保存本地登录信息
+        try {
+          uni.setStorageSync('store_login_info', login_info);
+        } catch (e) {
+
+        } //TODO handle the exception
+        //返回首页
+        setTimeout(function () {
+          uni.switchTab({ url: '/pages/index/index' });
+        }, 500);
+      } });
+
+  },
+  sendVerify: function sendVerify(context, _ref3) {var type = _ref3.type,phone = _ref3.phone;
+    //发送验证码
+    (0, _req.default)('send-verify', {
+      data: {
+        type: type,
+        phone: phone } });
+
+
+
+
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 22 */
+/*!**********************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/utils/req.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _config = _interopRequireDefault(__webpack_require__(/*! ./config.js */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var host = _config.default.host;
+
+function req(url_path, request_param) {
+  var url = _config.default.url[url_path].url;
+  var method = _config.default.url[url_path].method;
+
+  var req_obj = Object.assign({}, {
+    url: host + url,
+    method: method,
+    dataType: 'json',
+    data: {},
+    header: {
+      'content-type': 'application/x-www-form-urlencoded' },
+
+    success: function success(res) {
+      console.log('-----success------');
+      console.log(res);
+      var res_info = res.data;
+      var res_code = res_info.code;
+      var res_msg = res_info.msg;
+      var res_data = res_info.hasOwnProperty('data') ? res_info.data : [];
+
+      if (request_param.hasOwnProperty('handleSuccess') && res_code === 1) {
+        //操作成功
+        request_param.handleSuccess(res_data, res_info);
+      } else if (!request_param.hasOwnProperty('handleSuccess') && !request_param.hasOwnProperty('hide_toast') && res_code === 1) {
+        //成功无需更多操作
+        getApp().globalData.showToastNoIcon({ title: res_msg, icon: 'none' });
+      } else {
+        !request_param.hasOwnProperty('hide_toast') && getApp().globalData.showToastNoIcon(res_msg);
+      }
+    },
+    fail: function fail(res) {
+      console.log('-----fail------');
+      console.log(res);
+
+    },
+    complete: function complete(res) {
+      console.log('-----complete------');
+      console.log(res);
+    } },
+  request_param);
+  uni.request(req_obj);
+}var _default =
+
+req;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 23 */
+/*!*************************************************!*\
+  !*** D:/web-pro/uni-app/sz-car/utils/config.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var debug = true;
+var domain = debug ? 'slh.car.com' : '';
+var host = 'http://' + domain + '/api/';
+var config = {
+  debug: debug,
+  domain: domain,
+  host: host,
+  url: {
+    'send-verify': { url: 'index/sendSms', method: 'post' }, //发送验证码
+    'user-reg': { url: 'index/reg', method: 'post' },
+    'user-login': { url: 'index/login', method: 'post' },
+
+    'index-data': { url: 'index/data', method: 'get' } //首页所有数据
+  } };var _default =
+
+config;exports.default = _default;
 
 /***/ })
 ]]);

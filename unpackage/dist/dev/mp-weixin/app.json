@@ -12,7 +12,9 @@
     "pages/index/web_view",
     "pages/mine/car",
     "pages/mine/qr_code",
-    "pages/mine/team"
+    "pages/mine/team",
+    "pages/mine/car_add",
+    "pages/index/login"
   ],
   "subPackages": [],
   "window": {
@@ -55,5 +57,5 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap4.json"
+  "sitemapLocation": "sitemap48.json"
 }

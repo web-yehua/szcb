@@ -1,0 +1,88 @@
+
+.page-tip{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	padding: 10px;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	font-size: 11px;
+	background: #F4EFD1;
+	color: #F18425;
+}
+.item-block{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	padding: 10px;
+	font-size: 15px;
+	color: #333333;
+}
+.item-block .label{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.item-block .label .dot{
+	color: #FF0000;
+	margin-right: 5px;
+}
+.item-block .label .name{
+	font-weight: bold;
+}
+.item-block .item-input{
+	color: #666666;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.item-block .item-input.unit-input{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.item-block .item-input.unit-input .input{
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333333;
+}
+.item-block .item-input .input{
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+}
+.btn-save{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+	padding: 15px 0;
+	margin: 0 15px;
+	font-size: 15px;
+	font-weight: 600;
+	background: #2D7EF7;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 25px;
+}
+
+
+

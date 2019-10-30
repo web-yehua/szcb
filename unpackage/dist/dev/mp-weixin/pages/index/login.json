@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "用户登录",
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons",
+    "send-verify": "/components/send-verify"
+  }
+}

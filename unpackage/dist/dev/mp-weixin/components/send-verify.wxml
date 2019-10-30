@@ -1,0 +1,1 @@
+<view class="verify-block"><button class="btn" type="button" disabled="{{btn_disabled}}" data-event-opts="{{[['tap',[['handleSend',['$event']]]]]}}" bindtap="__e">{{notice}}</button></view>
