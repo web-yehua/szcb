@@ -1,9 +1,9 @@
 import Config from './config.js';
+const host = Config.host;
 
 function req(url_path,request_param){
-	let host = Config.host;
-	let url = Config.url[url_path].url;
-	let method = Config.url[url_path].method;
+	const url = Config.url[url_path].url;
+	const method = Config.url[url_path].method;
 	
 	let req_obj = Object.assign({},{
 		url: host+url,
@@ -24,8 +24,11 @@ function req(url_path,request_param){
 			if(request_param.hasOwnProperty('handleSuccess') && res_code===1){
 				//操作成功
 				request_param.handleSuccess(res_data,res_info)
+			}else if(!request_param.hasOwnProperty('handleSuccess') && !request_param.hasOwnProperty('hide_toast') && res_code===1){
+				//成功无需更多操作
+				getApp().globalData.showToastNoIcon({title:res_msg,icon:'none'})
 			}else{
-				uni.showToast({title:res_msg,icon:'none'})
+				!request_param.hasOwnProperty('hide_toast') && getApp().globalData.showToastNoIcon(res_msg)
 			}
 		},
 		fail: (res) => {

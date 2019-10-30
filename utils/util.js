@@ -53,7 +53,10 @@ function showToastNoIcon(title){
 	uni.showToast({title:title,icon:"none"})
 }
 
+
+
+
 export {
 	friendlyDate,
-	showToastNoIcon
+	showToastNoIcon,
 }

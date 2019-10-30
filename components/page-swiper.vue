@@ -13,7 +13,7 @@
 			>
 					<swiper-item class="swiper-item" v-for="(item,index) in list" :key="index">
 						
-						<image class="swiper-item-image" :src="item.src"></image>
+						<image class="swiper-item-image" :src="item.img"></image>
 					</swiper-item>
 					
 				</swiper>

@@ -1,0 +1,1 @@
+<view class="item-block"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index"><view class="item"><view class="info"><view class="intro">{{item.intro}}</view><view class="date">{{item.date}}</view></view><view class="money">{{item.status_name}}</view></view></block></view>

@@ -10,12 +10,8 @@
 		</view>
 		<view class="goods-grid-block">
 			<goodsItem
-			/>
-			<goodsItem
-			/>
-			<goodsItem
-			/>
-			<goodsItem
+				v-for="(item,index) in items"
+				:key = "index"
 			/>
 		</view>
 	</view>
@@ -42,6 +38,10 @@
 				type:String,
 				default:''
 			},
+			items:{
+				type:Array,
+				default:()=>[]
+			}
 		},
 		data() {
 			return {

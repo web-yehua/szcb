@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniIcons = function uniIcons() {return __webpack_require__.e(/*! import() | components/uni-icons/uni-icons */ "components/uni-icons/uni-icons").then(__webpack_require__.bind(null, /*! ../../components/uni-icons/uni-icons.vue */ 48));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniIcons = function uniIcons() {return __webpack_require__.e(/*! import() | components/uni-icons/uni-icons */ "components/uni-icons/uni-icons").then(__webpack_require__.bind(null, /*! ../../components/uni-icons/uni-icons.vue */ 114));};var _default =
 
 
 
@@ -193,16 +193,35 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     return {
       is_open: false,
       btn_list: [
-      { name: '我的爱车', 'img': '/static/images/mine-car.png' },
-      { name: '我的二维码', 'img': '/static/images/mine-qrcode.png' },
-      { name: '我的团队', 'img': '/static/images/mine-team.png' },
-      { name: '常见问题', 'img': '/static/images/mine-quesion.png' },
-      { name: '关于我们', 'img': '/static/images/mine-about.png' },
-      { name: '联系我们', 'img': '/static/images/mine-tel.png' }] };
+      { name: '我的爱车', 'img': '/static/images/mine-car.png', opt_info: { type: 'page', 'content': 'car' } },
+      { name: '我的二维码', 'img': '/static/images/mine-qrcode.png', opt_info: { type: 'page', 'content': 'qr_code' } },
+      { name: '我的团队', 'img': '/static/images/mine-team.png', opt_info: { type: 'page', 'content': 'team' } },
+      { name: '常见问题', 'img': '/static/images/mine-quesion.png', opt_info: { type: 'web', 'content': 'http://www.baidu.com' } },
+      { name: '关于我们', 'img': '/static/images/mine-about.png', opt_info: { type: 'web', 'content': 'http://www.baidu.com' } },
+      { name: '联系我们', 'img': '/static/images/mine-tel.png', opt_info: { type: 'tel', 'content': '18702783614' } }] };
 
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    handleOpt: function handleOpt(info, item) {var
+      type = info.type,content = info.content;
+      if (type === 'tel') {
+        //打电话
+        uni.makePhoneCall({
+          phoneNumber: content });
+
+      } else if (type === 'web') {
+        uni.navigateTo({
+          url: '/pages/index/web_view?src=' + content + '&name=' + item.name });
+
+      } else {
+        uni.navigateTo({
+          url: content });
+
+      }
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

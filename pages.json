@@ -35,6 +35,72 @@
 				"navigationBarTitleText": "客服"
 			}
 		}
+        ,{
+            "path" : "pages/mine/setting_info",
+            "style" : {
+				"navigationBarTitleText": "个人信息"
+			}
+        }
+        ,{
+            "path" : "pages/mine/money_log",
+            "style" : {
+				"navigationBarTitleText": "余额"
+			}
+        }
+        ,{
+            "path" : "pages/mine/withdrawal",
+            "style" : {
+				"navigationBarTitleText": "提现"
+			}
+        }
+        ,{
+            "path" : "pages/mine/withdrawal_log",
+            "style" : {
+				"navigationBarTitleText": "提现日志"
+			}
+        }
+        ,{
+            "path" : "pages/mine/open_vip",
+            "style" : {
+				"navigationBarTitleText": "会员"
+			}
+        }
+        ,{
+            "path" : "pages/index/web_view",
+            "style" : {
+				"navigationBarTitleText": "关于我们"
+			}
+        }
+        ,{
+            "path" : "pages/mine/car",
+            "style" : {
+				"navigationBarTitleText": "我的爱车"
+			}
+        }
+        ,{
+            "path" : "pages/mine/qr_code",
+            "style" : {
+				"navigationBarTitleText": "我的二维码"
+			}
+        }
+        ,{
+            "path" : "pages/mine/team",
+            "style" : {
+				"navigationBarTitleText": "我的团队"
+			}
+        }
+        ,{
+            "path" : "pages/mine/car_add",
+            "style" : {
+				"navigationBarTitleText": "新增爱车"
+			}
+        }
+        ,{
+            "path" : "pages/index/login",
+            "style" : {
+				"navigationBarTitleText": "用户登录"
+			}
+        }
     ],
 	"tabBar": {
 	    "color": "#7A7E83",

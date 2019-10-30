@@ -9,15 +9,10 @@
 			<uni-icons type="forward" color="#327bf6"></uni-icons>
 		</view>
 		<view class="goods-grid-block">
-			<view class="item-img left-image">
-				<image class=" image" src="/static/images/my-swiper.jpg" mode="scaleToFill"></image>
+			<view class="item-img left-image" v-for="(item,index) in items" :key="index">
+				<image class=" image" :src="item.img" mode="scaleToFill"></image>
 			</view>
-			<view class="item-img">
-				<image class="image" src="/static/images/my-swiper.jpg" mode="scaleToFill"></image>
-			</view>
-			<view class="item-img">
-				<image class="image" src="/static/images/my-swiper.jpg" mode="scaleToFill"></image>
-			</view>
+			
 		</view>
 	</view>
 </template>
@@ -43,6 +38,10 @@
 				type:String,
 				default:''
 			},
+			items:{
+				type:Array,
+				default:()=>[]
+			}
 		},
 		data() {
 			return {

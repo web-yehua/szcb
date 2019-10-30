@@ -1,0 +1,148 @@
+
+page,uni-page-wrapper{
+	background: #FFFFFF;
+}
+.main-container{
+	padding: 20px 10px;
+}
+.bg-block{
+	position: relative;
+	height: 150px;
+}
+.bg-block .image{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+.bg-block .up-block{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	margin-bottom: 18px;
+	color: #FFFFFF;
+	padding: 0 22px;
+}
+.bg-block .up-block .info{
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+.bg-block .up-block .money{
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.bg-block .up-block .msg{
+	font-size: 11px;
+}
+.item-block{
+	padding: 10px;
+}
+.item-block .label{
+	font-size: 14px;
+	font-weight: 600;
+	color: #333333;
+	margin-bottom: 10px;
+}
+.item-block .input-block {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	background: #F7F7F7;
+	color:#FE4521;
+	font-size: 14px;
+	font-weight: 500;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.item-block .input-block .input {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	
+	font-size:18px;
+	color:#FE4521;
+	margin-left: 5px;
+}
+.item-block .select-block{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.item-block .select-block .image{
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+.item-block .select-block .intro{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+.item-block .select-block .checkbox{
+	/* background: #2D7EF7;
+	color: #FFFFFF; */
+}
+.btn-save{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+	padding: 15px 0;
+	margin: 0 15px;
+	font-size: 15px;
+	font-weight: 600;
+	background: #2D7EF7;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 25px;
+}
+
+

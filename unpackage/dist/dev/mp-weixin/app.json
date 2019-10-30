@@ -3,7 +3,16 @@
     "pages/index/index",
     "pages/cate/index",
     "pages/mine/index",
-    "pages/index/customer_service"
+    "pages/index/customer_service",
+    "pages/mine/setting_info",
+    "pages/mine/money_log",
+    "pages/mine/withdrawal",
+    "pages/mine/withdrawal_log",
+    "pages/mine/open_vip",
+    "pages/index/web_view",
+    "pages/mine/car",
+    "pages/mine/qr_code",
+    "pages/mine/team"
   ],
   "subPackages": [],
   "window": {
@@ -46,5 +55,5 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap86.json"
+  "sitemapLocation": "sitemap4.json"
 }

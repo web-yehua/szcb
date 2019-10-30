@@ -5,9 +5,9 @@
 			<uni-icons class="uni-icon-my-search" type="search" size="16" color="#a8a8a8" :style="{'font-weight': 'bold'}"/>
 			<view class="search-text">快速搜索</view>
 		</view>
-		<view class="tip-msg">
+		<view class="tip-msg" v-if="user_car_num<=0">
 			<image class="image" src="../../static/images/blue-car.jpg" mode="aspectFit"></image>
-			<view class="text">车库还是空的，添加一辆车吧 </view>
+			<view class="text">车库还是空的，添加一辆车吧</view>
 			<uni-icons type="forward" color="#327bf6"></uni-icons>
 		</view>
 		<pageSwiper
@@ -15,10 +15,14 @@
 			:list="swiper_list"
 		/>
 		<view class="uni-grid-block" >
-			<view class="item-block" v-for="(item,index) in grid_list" :key="index">
+			<navigator  open-type="switchTab" :url="'/pages/cate/index?cid='+item.id" class="item-block" v-for="(item,index) in grid_list" :key="index">
 				<image class="image" :src="item.img" mode="aspectFit" />
 				<text class="text">{{item.name}}</text>
-			</view>
+			</navigator>
+			<navigator  open-type="switchTab" url="/pages/cate/index?type=1" class="item-block">
+				<image class="image" src="/static/images/c8.jpg" mode="aspectFit" />
+				<text class="text">全部</text>
+			</navigator>
 		</view>
 		<view class="join-member-block">
 			<view class="join-member-block-postion">
@@ -35,11 +39,13 @@
 			show-left-img="new"
 			tip-text="新品推荐"
 			sub-text="体验前沿科技"
+			:items="new_goods_list"
 		/>
 		
 		<goodsGridBlock
 			show-left-img="hot"
 			tip-text="热销单品"
+			:items="hot_goods_list"
 		/>
 	</view>
 </template>
@@ -51,6 +57,9 @@
 	import pageSwiper from '../../components/page-swiper.vue'
 	import goodsGridBlock from '../../components/goods-grid-block.vue'
 	import goodsThirdBlock from '../../components/goods-third-block.vue'
+	
+	import {  mapState } from "vuex";
+	
 	export default {
 		components:{
 			uniIcons,
@@ -59,23 +68,37 @@
 			goodsGridBlock,
 			goodsThirdBlock,
 		},
+		mounted(){
+			var _that = this;
+			//请求数据
+			this.$req('index-data',{
+				handleSuccess(data,res){
+					let {follow_img,goods_cate,new_goods_list,new_hot_list} = data;
+					//轮播图
+					_that.swiper_list = follow_img||[];
+					//分类
+					_that.grid_list = goods_cate||[];
+					//商品列表-新品
+					_that.new_goods_list = new_goods_list||[];
+					//商品列表-热门
+					_that.new_goods_list = new_goods_list||[];
+					
+				}
+			})
+		},
+		computed:{
+			...mapState(['user_id','user_type','user_car_num'])
+		},
 		data() {
 			return {
 				swiper_list:[
-					{"src":"/static/images/my-swiper.jpg"},
-					{"src":"/static/images/my-swiper.jpg"},
-					{"src":"/static/images/my-swiper.jpg"}
+					
 				],
 				grid_list:[
-					{"name":"油品","img":"/static/images/c1.jpg"},
-					{"name":"加装","img":"/static/images/c2.jpg"},
-					{"name":"机滤","img":"/static/images/c3.jpg"},
-					{"name":"火花塞","img":"/static/images/c4.jpg"},
-					{"name":"变速箱","img":"/static/images/c5.jpg"},
-					{"name":"轮胎","img":"/static/images/c6.jpg"},
-					{"name":"比价","img":"/static/images/c7.jpg"},
-					{"name":"全部","img":"/static/images/c8.jpg"},
-				]
+					
+				],
+				new_goods_list:[],
+				hot_goods_list:[],
 			}
 		},
 		methods: {

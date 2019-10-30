@@ -1,19 +1,19 @@
 <template>
 	<view>
 		<view class="mine-block">
-			<view class="setting">
+			<navigator url="setting_info" class="setting">
 				<uni-icons type="gear" size="26" color="#FFFFFF" :style="{'font-weight': 'bold'}"/>
-			</view>
+			</navigator>
 			<view class="left-block">
 				<image class="image" src="../../static/images/c3.jpg" mode="scaleToFill"></image>
 				<view class="name">用户名</view>
 			</view>
 			<view class="right-block">
-				<view class="item-block">
+				<navigator url="money_log" class="item-block">
 					<image class="image-coin" src="../../static/images/coin.png" mode="scaleToFill"></image>
 					<view class="name">账户余额</view>
 					<uni-icons type="forward" size="16" color="#FFFFFF" :style="{'font-weight': 'bold'}"/>
-				</view>
+				</navigator>
 				<view class="item-block money">
 					0
 				</view>
@@ -40,14 +40,14 @@
 				<view class="info-block">
 					开通VIP尊享更多特权
 				</view>
-				<view class="right-info">
+				<navigator url="open_vip" class="right-info">
 					开通
-				</view>
+				</navigator>
 			</view>
 		</view>
 		
 		<view class="grid-blcok">
-			<view class="item" v-for="(item,index) in btn_list" :key="index">
+			<view class="item" v-for="(item,index) in btn_list" :key="index" @click="handleOpt(item.opt_info,item)">
 				<image class="image" :src="item.img" mode="aspectFit"></image>
 				<view class="name">
 					{{item.name}}
@@ -61,6 +61,7 @@
 
 <script>
 	import uniIcons from '../../components/uni-icons/uni-icons.vue'
+	import {  mapState } from "vuex";
 	export default {
 		components:{
 			uniIcons,
@@ -69,17 +70,37 @@
 			return {
 				is_open:false,
 				btn_list:[
-					{name:'我的爱车','img':'/static/images/mine-car.png',},
-					{name:'我的二维码','img':'/static/images/mine-qrcode.png',},
-					{name:'我的团队','img':'/static/images/mine-team.png',},
-					{name:'常见问题','img':'/static/images/mine-quesion.png',},
-					{name:'关于我们','img':'/static/images/mine-about.png',},
-					{name:'联系我们','img':'/static/images/mine-tel.png',},
+					{name:'我的爱车','img':'/static/images/mine-car.png',opt_info:{type:'page','content':'car'}},
+					{name:'我的二维码','img':'/static/images/mine-qrcode.png',opt_info:{type:'page','content':'qr_code'}},
+					{name:'我的团队','img':'/static/images/mine-team.png',opt_info:{type:'page','content':'team'}},
+					{name:'常见问题','img':'/static/images/mine-quesion.png',opt_info:{type:'web','content':'http://www.baidu.com'}},
+					{name:'关于我们','img':'/static/images/mine-about.png',opt_info:{type:'web','content':'http://www.baidu.com'}},
+					{name:'联系我们','img':'/static/images/mine-tel.png',opt_info:{type:'tel','content':'18702783614'}},
 				]
 			}
 		},
+		computed:{
+			...mapState(['user_id','user_type','user_car_num'])
+		},
 		methods: {
-			
+			handleOpt(info,item){
+				let {type,content} = info;
+				if(type==='tel'){
+					//打电话
+					uni.makePhoneCall({
+					    phoneNumber: content
+					});
+				}else if(type==='web'){
+					uni.navigateTo({
+						url:'/pages/index/web_view?src='+content+'&name='+item.name
+					})
+				}else{
+					uni.navigateTo({
+						url:content
+					})
+				}
+				
+			}
 		}
 	}
 </script>
